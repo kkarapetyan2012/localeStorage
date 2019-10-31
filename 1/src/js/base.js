@@ -39,6 +39,7 @@ setId.addEventListener('click', () => {
 removeId.addEventListener('click', myStorage.remove)
 
 
+
 // getId.addEventListener('click', () => {
 //     result.append(getData);
 //     myStorage.get;
