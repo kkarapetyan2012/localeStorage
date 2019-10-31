@@ -6,22 +6,24 @@ const myInput = document.getElementById('myInput');
 
 class Storage  {
 
-    get(data) {
+    get() {
         // alert(1)
-        const getData = localStorage.getItem(data);
-        result.append(getData)
+        const getData = localStorage.getItem('key');
+        result.append(getData);
     }
 
-    set(data) {
+    set(key) {
         // alert(2)
-        const setData = localStorage.setItem('data',JSON.stringify(data));
-        result.append(setData);
+        const setData = localStorage.setItem('key',JSON.stringify(key));
+        // localStorage.setItem('key',JSON.stringify(key));
+        return result.append(setData);
     }
 
-    remove(key) {
+    remove() {
         // alert(3)
-        const removeData = localStorage.removeItem(key);
-        result.append(removeData);
+        const removeData = localStorage.removeItem('key');
+        // localStorage.removeItem('key');
+        return result.append(removeData);
     }
     
 }
@@ -35,4 +37,20 @@ setId.addEventListener('click', () => {
 })
 
 removeId.addEventListener('click', myStorage.remove)
+
+
+// getId.addEventListener('click', () => {
+//     result.append(getData);
+//     myStorage.get;
+// });
+
+// setId.addEventListener('click', () => {
+//     result.append(setData);
+//     myStorage.set(myInput.value)
+// })
+
+// removeId.addEventListener('click', () => {
+//     result.append(removeData);
+//     myStorage.remove;
+// })
 
